@@ -56,6 +56,48 @@ int main() {
 2. **`expired()`**: Returns `true` if the managed object has already been destroyed (i.e., if there are no remaining `std::shared_ptr` instances holding it).
 3. **`reset()`**: Resets the `std::weak_ptr`, releasing the reference to the managed object.
 
+```
+#include <iostream>
+#include <memory>
+
+class Example {
+public:
+    Example() { std::cout << "Example object created.\n"; }
+    ~Example() { std::cout << "Example object destroyed.\n"; }
+};
+
+void checkWeakPtr(std::weak_ptr<Example> weakPtr) {
+    if (weakPtr.expired()) {
+        std::cout << "The object has already been destroyed.\n";
+    } else {
+        std::shared_ptr<Example> sharedPtr = weakPtr.lock();  // Promote weak_ptr to shared_ptr
+        if (sharedPtr) {
+            std::cout << "The object is still alive. Accessing it via shared_ptr.\n";
+        }
+    }
+}
+
+int main() {
+    std::weak_ptr<Example> weakPtr;  // Initially empty weak_ptr
+
+    {
+        std::shared_ptr<Example> sharedPtr = std::make_shared<Example>();  // Create shared_ptr to Example object
+        weakPtr = sharedPtr;  // Assign shared_ptr to weak_ptr
+
+        // Check the state of weak_ptr while sharedPtr is still valid
+        checkWeakPtr(weakPtr);
+
+        // After this block, sharedPtr will go out of scope and the object will be destroyed
+    }
+
+    // Check the state of weakPtr after the object is destroyed
+    checkWeakPtr(weakPtr);
+
+    return 0;
+}
+
+```
+
 ### Use Case Scenarios:
 - **Observer Pattern**: A `std::weak_ptr` can be used to observe an object without affecting its lifecycle.
 - **Cyclic Dependencies**: Preventing memory leaks in data structures like graphs or trees where nodes may refer to each other in a cycle.
