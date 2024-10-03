@@ -98,6 +98,89 @@ int main() {
 
 ```
 
+```
+#include <iostream>
+#include <memory>
+
+class Example {
+public:
+    Example() { std::cout << "Example object created.\n"; }
+    ~Example() { std::cout << "Example object destroyed.\n"; }
+};
+
+int main() {
+    std::weak_ptr<Example> weakPtr;  // Initialize empty weak_ptr
+
+    {
+        std::shared_ptr<Example> sharedPtr = std::make_shared<Example>();  // Create shared_ptr
+        weakPtr = sharedPtr;  // Assign shared_ptr to weakPtr
+
+        if (!weakPtr.expired()) {
+            std::cout << "The weak_ptr is observing a valid object.\n";
+        }
+
+        // Reset weak_ptr explicitly, it no longer observes the object
+        weakPtr.reset();
+
+        if (weakPtr.expired()) {
+            std::cout << "The weak_ptr no longer observes an object (after reset).\n";
+        }
+    }
+
+    // At this point, the sharedPtr has gone out of scope, and the Example object is destroyed.
+
+    return 0;
+}
+
+```
+
+```
+#include <iostream>
+#include <memory>
+
+class Example {
+public:
+    Example() { std::cout << "Example object created.\n"; }
+    ~Example() { std::cout << "Example object destroyed.\n"; }
+};
+
+int main() {
+    std::weak_ptr<Example> weakPtr;  // Initialize empty weak_ptr
+
+    {
+        std::shared_ptr<Example> sharedPtr = std::make_shared<Example>();  // Create shared_ptr
+        weakPtr = sharedPtr;  // Assign shared_ptr to weakPtr
+
+        if (!weakPtr.expired()) {
+            std::cout << "The weak_ptr is observing a valid object.\n";
+        }
+
+        // Reset weak_ptr explicitly, it no longer observes the object
+        weakPtr.reset();
+
+        if (weakPtr.expired()) {
+            std::cout << "The weak_ptr no longer observes an object (after reset).\n";
+        }
+    }
+
+    // At this point, the sharedPtr has gone out of scope, and the Example object is destroyed.
+
+    return 0;
+}
+
+
+```
+
+```
+
+Example object created.
+The weak_ptr is observing a valid object.
+The weak_ptr no longer observes an object (after reset).
+Example object destroyed.
+
+```
+
+
 ### Use Case Scenarios:
 - **Observer Pattern**: A `std::weak_ptr` can be used to observe an object without affecting its lifecycle.
 - **Cyclic Dependencies**: Preventing memory leaks in data structures like graphs or trees where nodes may refer to each other in a cycle.
