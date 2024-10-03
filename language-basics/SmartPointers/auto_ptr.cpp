@@ -1,4 +1,7 @@
 // C++ program to illustrate the use of auto_ptr 
+
+// notice that auto_ptr has been replaced by unique_ptr in c++ 17 
+
 #include <iostream> 
 #include <memory> 
 
