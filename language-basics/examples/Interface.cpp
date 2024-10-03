@@ -1,11 +1,6 @@
 #include <iostream>
 #include <memory>
 
-using namespace std;
-
-
-
-
 // Interface (abstract class)
 class Shape {
 public:
