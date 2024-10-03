@@ -1,3 +1,81 @@
+
+
+```
+
+// C++ program to implement
+// the above approach
+
+// for std::string
+#include <string>
+
+// for std::cout
+#include <iostream>
+
+// for EXIT_SUCCESS macro
+#include <cstdlib>
+
+// for std::vector
+#include <vector>
+
+// for std::move()
+#include <utility>
+
+// Declaration
+std::vector<std::string> createAndInsert();
+
+// Driver code
+int main()
+{
+    // Constructing an empty vector
+    // of strings
+    std::vector<std::string> vecString;
+
+    // calling createAndInsert() and
+    // initializing the local vecString
+    // object
+    vecString = createAndInsert();
+
+    // Printing content of the vector
+    for (const auto& s : vecString) {
+        std::cout << s << '\n';
+    }
+
+    return EXIT_SUCCESS;
+}
+
+// Definition
+std::vector<std::string> createAndInsert()
+{
+    // constructing a vector of
+    // strings with an size of
+    // 3 elements
+    std::vector<std::string> vec;
+    vec.reserve(3);
+
+    // constructing & initializing
+    // a string with "Hello"
+    std::string str("Hello");
+
+    // Inserting a copy of string
+    // object
+    vec.push_back(str);
+
+    // Inserting a copy of an
+    // temporary string object
+    vec.push_back(str + str);
+
+    // Again inserting a copy of
+    // string object
+    vec.push_back(std::move(str));
+
+    // Finally, returning the local
+    // vector
+    return vec;
+}
+
+
+```
+
 In the provided C++ code, the line:
 
 ```cpp
