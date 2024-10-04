@@ -1,3 +1,7 @@
+
+Functors are objects that can be treated as though they are a function. Functors are most commonly used along with STL algorithms. It overloads the function-call operator () and allows us to use an object like a function.
+
+
 1. Arithmetic Functors
 2. Relational Functors
 3. Logical Functors
@@ -30,5 +34,10 @@
 1. bit_and
 2. bit_or
 3. bit_xor
+
+## Reference
+
+https://www.geeksforgeeks.org/functors-in-cpp/
+
 
 
