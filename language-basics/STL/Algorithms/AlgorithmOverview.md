@@ -6,9 +6,9 @@ There is no formal classification of STL algorithms, but we can group them into 
 
 performs operations that modifies the elements of the given container or rearrange their order
 
-* copy
-* fill
-* transform
+* [copy](https://www.geeksforgeeks.org/different-methods-copy-c-stl-stdcopy-copy_n-copy_if-copy_backward/)
+* [fill](https://www.geeksforgeeks.org/fill-in-cpp-stl/)
+* [transform](https://www.geeksforgeeks.org/transform-c-stl-perform-operation-elements/)
 * [replace](https://www.geeksforgeeks.org/stdreplace-stdreplace_if-c/)
 * [swap](https://www.geeksforgeeks.org/swap-in-cpp/)
 * [reverse](https://www.geeksforgeeks.org/stdreverse-in-c/)
