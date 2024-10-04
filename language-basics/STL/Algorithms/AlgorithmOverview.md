@@ -19,13 +19,13 @@ performs operations that modifies the elements of the given container or rearran
 ## Non-Manipulative Algorithms
 
 1. [max_element](https://www.geeksforgeeks.org/max_element-in-cpp/)
-2. min_element
-3. accumulate
-4. count
-5. find
-6. is_permutation
-7. is_sorted
-8. partial_sum
+2. [min_element](https://www.geeksforgeeks.org/stdmin_element-in-cpp/)
+3. [accumulate](https://www.geeksforgeeks.org/accumulate-and-partial_sum-in-c-stl-numeric-header/)
+4. [count](https://www.geeksforgeeks.org/std-count-cpp-stl/)
+5. [find](https://www.geeksforgeeks.org/std-find-in-cpp/)
+6. [is_permutation](https://www.geeksforgeeks.org/stdis_permutation-c-stl/)
+7. [is_sorted](https://www.geeksforgeeks.org/stdis_sorted-in-cpp/)
+8. [partial_sum](https://www.geeksforgeeks.org/accumulate-and-partial_sum-in-c-stl-numeric-header/)  **prefix sum**
 
 
 
