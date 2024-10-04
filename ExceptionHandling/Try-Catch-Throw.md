@@ -191,7 +191,7 @@ int main() {
 ---
 
 ### Summary
-- **`throw`**: Used to signal an exception.
+- **`throw`**: Used to signal an exception. Can through object of different types, like char *, or std::invalid_arugement etc. In the rethrow case, it takes no argument and throws the existing exception (See example 5)
 - **`try`**: Used to define a block of code where exceptions might occur.
 - **`catch`**: Used to handle exceptions. You can catch specific exceptions or use `catch(...)` to handle all types.
 - **Multiple `catch` blocks** allow handling different types of exceptions in different ways.
