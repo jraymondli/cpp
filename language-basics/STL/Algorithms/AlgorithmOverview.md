@@ -14,7 +14,7 @@ performs operations that modifies the elements of the given container or rearran
 * [reverse](https://www.geeksforgeeks.org/stdreverse-in-c/)
 * [rotate](https://www.geeksforgeeks.org/rotate-in-cpp-stl/)
 * [remove](https://www.geeksforgeeks.org/stdremove-stdremove_if-c/)
-* unique
+* [unique](https://www.geeksforgeeks.org/stdunique-in-cpp/)
 
 ## Non-Manipulative Algorithms
 
