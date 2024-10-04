@@ -10,7 +10,7 @@ performs operations that modifies the elements of the given container or rearran
 * fill
 * transform
 * [replace](https://www.geeksforgeeks.org/stdreplace-stdreplace_if-c/)
-* swap
+* [swap](https://www.geeksforgeeks.org/swap-in-cpp/)
 * reverse
 * rotate
 * remove
