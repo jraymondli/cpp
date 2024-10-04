@@ -9,7 +9,7 @@ performs operations that modifies the elements of the given container or rearran
 * copy
 * fill
 * transform
-* replace
+* [replace](https://www.geeksforgeeks.org/stdreplace-stdreplace_if-c/)
 * swap
 * reverse
 * rotate
