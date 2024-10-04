@@ -168,6 +168,10 @@ For example:
 - `iterator_traits<T>::value_type` gives the type of the elements pointed to by an iterator of type `T`.
 - `iterator_traits<T>::iterator_category` allows algorithms to work efficiently with different kinds of iterators.
 
+### References
+
+1. https://www.geeksforgeeks.org/input-iterators-in-cpp/
+
 ### Conclusion
 
 Iterators in C++ are a powerful abstraction for traversing and manipulating elements in containers. They allow uniform access to a wide range of data structures, such as arrays, vectors, lists, and maps, without requiring knowledge of their underlying implementations.
