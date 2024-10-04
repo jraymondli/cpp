@@ -12,7 +12,7 @@ performs operations that modifies the elements of the given container or rearran
 * [replace](https://www.geeksforgeeks.org/stdreplace-stdreplace_if-c/)
 * [swap](https://www.geeksforgeeks.org/swap-in-cpp/)
 * [reverse](https://www.geeksforgeeks.org/stdreverse-in-c/)
-* rotate
+* [rotate](https://www.geeksforgeeks.org/rotate-in-cpp-stl/)
 * remove
 * unique
 
