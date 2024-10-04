@@ -18,4 +18,15 @@ performs operations that modifies the elements of the given container or rearran
 
 ## Non-Manipulative Algorithms
 
+1. [max_element](https://www.geeksforgeeks.org/max_element-in-cpp/)
+2. min_element
+3. accumulate
+4. count
+5. find
+6. is_permutation
+7. is_sorted
+8. partial_sum
+
+
+
 
