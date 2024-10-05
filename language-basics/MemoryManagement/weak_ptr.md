@@ -56,7 +56,7 @@ int main() {
 2. **`expired()`**: Returns `true` if the managed object has already been destroyed (i.e., if there are no remaining `std::shared_ptr` instances holding it).
 3. **`reset()`**: Resets the `std::weak_ptr`, releasing the reference to the managed object.
 
-```
+```cpp
 #include <iostream>
 #include <memory>
 
