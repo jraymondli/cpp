@@ -349,7 +349,39 @@ int main() {
 
 ### Summary of Key Patterns:
 
-| Pattern        | Category        | Purpose                                                                                  |
-| -------------- | --------------- | ---------------------------------------------------------------------------------------- |
-| Singleton      | Creational      | Ensure only one instance of a class exists.                                               |
-| Factory        |
+Here's a summarized table of various design patterns, categorized into **Creational**, **Structural**, and **Behavioral** patterns:
+
+| **Pattern**               | **Category**   | **Purpose**                                                                                      | **Example Use**                                                |
+|---------------------------|----------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| **Singleton**              | Creational     | Ensures a class has only one instance and provides a global point of access to it.               | Logging, Configuration Management                              |
+| **Factory Method**         | Creational     | Defines an interface for creating objects, but lets subclasses alter the type of objects created. | Object creation without exposing instantiation details          |
+| **Abstract Factory**       | Creational     | Provides an interface for creating families of related objects without specifying their concrete classes. | GUI toolkit creation (buttons, windows, etc.)                  |
+| **Builder**                | Creational     | Constructs a complex object step by step.                                                        | Building objects like HTTP requests, Car builders               |
+| **Prototype**              | Creational     | Creates new objects by copying existing ones (cloning).                                          | Cloning objects when object creation is expensive               |
+| **Adapter**                | Structural     | Converts an interface of a class into another interface that clients expect.                     | Adapting legacy systems to new interfaces                       |
+| **Bridge**                 | Structural     | Decouples an abstraction from its implementation, allowing them to vary independently.            | GUI frameworks, cross-platform graphics interfaces              |
+| **Decorator**              | Structural     | Attaches additional responsibilities to an object dynamically.                                   | Adding features to objects like Coffee with Milk/Sugar          |
+| **Facade**                 | Structural     | Provides a simplified interface to a complex subsystem.                                          | Simplifying usage of complex libraries like graphics subsystems |
+| **Proxy**                  | Structural     | Provides a surrogate or placeholder for another object to control access to it.                   | Remote objects, virtual proxies (lazy loading)                  |
+| **Composite**              | Structural     | Composes objects into tree structures to represent part-whole hierarchies.                        | UI elements (windows, buttons), file systems                    |
+| **Flyweight**              | Structural     | Minimizes memory usage by sharing data with similar objects.                                      | Managing large numbers of objects like characters in a text editor |
+| **Strategy**               | Behavioral     | Defines a family of algorithms, encapsulates them, and makes them interchangeable.                | Sorting algorithms, payment processing                          |
+| **Observer**               | Behavioral     | Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified. | Event-driven systems, GUI applications                          |
+| **Command**                | Behavioral     | Encapsulates a request as an object, allowing parameterization of clients with different requests. | Undo/Redo functionality, GUI commands                           |
+| **State**                  | Behavioral     | Allows an object to alter its behavior when its internal state changes.                           | Vending machines, state machines                                |
+| **Template Method**        | Behavioral     | Defines the skeleton of an algorithm, allowing subclasses to refine certain steps.                | Game AI strategies, report generation                           |
+| **Iterator**               | Behavioral     | Provides a way to access elements of a collection without exposing the underlying representation. | Traversing collections like lists or arrays                     |
+| **Mediator**               | Behavioral     | Defines an object that encapsulates how a set of objects interact.                                | Chat rooms, GUI component interaction                           |
+| **Memento**                | Behavioral     | Captures an object's internal state without violating encapsulation, allowing the object to be restored to this state later. | Undo functionality in text editors, state saving                |
+| **Chain of Responsibility**| Behavioral     | Passes a request along a chain of handlers until one of them handles the request.                 | Logging systems, event handling                                 |
+| **Visitor**                | Behavioral     | Separates algorithms from the objects they operate on, allowing new operations to be added without modifying the objects. | Operations on composite structures (e.g., file systems)         |
+| **Interpreter**            | Behavioral     | Defines a representation for a grammar and an interpreter to process sentences in that grammar.   | Parsing languages, calculators                                  |
+
+---
+
+### Summary:
+- **Creational Patterns** focus on the efficient creation of objects, minimizing complexity in the instantiation process.
+- **Structural Patterns** deal with the composition of classes and objects, ensuring that different components can work together.
+- **Behavioral Patterns** focus on communication and interaction between objects to achieve specific tasks. 
+
+These design patterns are templates for solving common software design problems in an elegant and reusable manner. Each pattern provides a structure that can be adapted to suit specific software requirements.
