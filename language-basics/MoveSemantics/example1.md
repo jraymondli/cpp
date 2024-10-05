@@ -1,6 +1,6 @@
 
 
-```
+```cpp
 
 // C++ program to implement
 // the above approach
