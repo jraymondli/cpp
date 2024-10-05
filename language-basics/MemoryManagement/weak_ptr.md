@@ -98,7 +98,7 @@ int main() {
 
 ```
 
-```
+```cpp
 #include <iostream>
 #include <memory>
 
@@ -134,7 +134,7 @@ int main() {
 
 ```
 
-```
+```cpp
 #include <iostream>
 #include <memory>
 
